@@ -1,10 +1,9 @@
-FROM public.ecr.aws/nginx/nginx:1.25
+FROM --platform=linux/amd64 nginx:latest
 
-COPY nginx/nginx.conf /etc/nginx/nginx.conf
-COPY nginx/default.conf etc/nginx/conf.d/default.conf
+# ARG publish=80:80
+# COPY nginx/nginx.conf /etc/nginx/nginx.conf
+COPY nginx/default.conf etc/nginx/conf.d/
 
 COPY build /usr/share/nginx/html
-
-EXPOSE 80
-
-CMD ["nginx"]
+# EXPOSE 80
+# CMD ["nginx", "-g", "daemon off;"]

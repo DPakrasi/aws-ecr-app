@@ -7,7 +7,7 @@ import Error from './Error';
 
 function App() {
   return (
-    <BrowserRouter basename='/earnrewards'>
+    <BrowserRouter basename='/family'>
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
